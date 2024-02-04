@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Anarchy or Fantsy </title>
+<link rel="icon" type="image/x-icon" href="icon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Anarchy or Fantasy">
+    <meta name="description" content="Try to guess!">
+    <meta name="anarchy-search-index" content="searchIndex.json">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anarchy or Fantasy">
+    <meta property="og:description" content="Try to guess!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anarchy or Fantasy">
+    <meta name="twitter:description" content="Try to guess!">
+
+<style>
+
+
+
+@font-face {
+ font-family: "PT Sans";
+ src:url(fonts/PTSans.ttf);
+}
+
+@font-face {
+ font-family: "Sowjetschablone";
+ src:url(fonts/Sowjetschablone.ttf);
+}
+
+.div {
+  font-family: PT Sans;
+  color: black;
+  width: 70%;
+  word-wrap: break-word;
+}
+
+p {
+  font-family: PT Sans;
+  color: black;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+a:link {
+  background-color: transparent;
+  text-decoration: none;
+  font-family: PT Sans;
+}
+
+a:visited {
+  background-color: transparent;
+  text-decoration: none;
+  font-family: PT Sans;
+}
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: PT Sans;
+}
+a:active {
+  color: #9E9E9E;
+  background-color: transparent;
+  text-decoration: none;	
+  font-family: PT Sans;
+}
+
+
+.link {
+  color: #90CAF9; text-decoration: understrike;
+} 
+
+}
+
+.bottom-container {
+position:relative;
+margin-top:40%;
+}
+
+
+img {
+    max-height: 100%;
+    height: auto;
+}
+
+body {
+  background-image: url('bg.png');
+ background-repeat: no-repeat;
+      background-attachment: fixed;  /*   <--- required   */
+}
+
+.outside-trigger {
+	bottom: 0;
+	cursor: default;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.button-01 {
+  font-family: PT Sans;
+  padding: 1em 3.5em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    transition:         color 1s;
+}
+
+.button-01:hover  {
+  color: #EF5350;
+}	
+
+.button-01:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-01 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-01 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-01:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+.button-02 {
+  font-family: PT Sans;
+  padding: 1em 3.5em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    transition:         color 1s;
+}
+
+.button-02:hover  {
+  color: #42A5F5;
+}	
+
+.button-02:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #48ff00,
+    #ff7300,
+    #ff0000,
+    #00ffd5,
+    #7a00ff,
+    #ff00c8,
+    #ff0000,
+    #fffb00,
+    #002bff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-02 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-02 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-02:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+.parent {
+position: relative
+
+}
+
+.child {
+position: fixed; bottom: 0; width:100%; text-align: center;
+  background-color: rgba(255,255,255,0.4);
+}
+
+h2 {
+  font-family: PT Sans;
+  color: black;
+  font-size:25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.modal-header {
+	align-items: baseline;
+	display: flex;
+	justify-content: space-between;
+}
+
+.close {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	height: 16px;
+	text-decoration: none;
+	width: 16px;
+
+	svg {
+		width: 16px;
+	}
+}
+
+.modal-wrapper {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.7);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.modal-dialog{
+    overflow-y: initial !important
+}
+
+.modal-body{
+    height: 80%;
+    overflow-y: auto;
+}
+
+
+#anarchy {
+	opacity: 0;
+	transition: $opacity-transition;
+	visibility: hidden;
+
+	&:target {
+		opacity: 1;
+		visibility: visible;
+
+		.modal-body {
+			opacity: 1;
+			transform: translateY(1);
+		}
+	}
+
+	.modal-body {
+		max-width: 900px;
+		opacity: 0;
+		transform: translateY(-50px);
+		transition: $opacity-transition;
+		width: 100%;
+		background: white;
+		padding: 10px;
+		z-index: 1;
+	}
+}
+
+#fantasy {
+	opacity: 0;
+	transition: $opacity-transition;
+	visibility: hidden;
+
+	&:target {
+		opacity: 1;
+		visibility: visible;
+
+		.modal-body {
+			opacity: 1;
+			transform: translateY(1);
+		}
+	}
+
+	.modal-body {
+		max-width: 900px;
+		opacity: 0;
+		transform: translateY(-50px);
+		transition: $opacity-transition;
+		width: 100%;
+		background: white;
+		padding: 10px;
+		z-index: 1;
+	}
+}
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<form style="position: absolute;right:0;top:0;padding:7px;"><a href="https://anarchyorfantasy.store/"><img src="img/lang.png" width="40"></a></form>
+ <div style="font-size:25px;">5/11</div>
+<center>
+
+<br>
+<div class="parent">
+
+<p style="font-size:30px; max-width: 80%;">ЕСЛИ ДАТЬ ЛЮДЯМ ВОЛЮ, КООПЕРАЦИЯ БУДЕТ НЕВОЗМОЖНА ИЗ-ЗА ПРИРОДНОГО ЭГОИЗМА</p>
+
+<img src="img/5.jpg" width="700">
+
+
+<div class="child">
+<h2>Это анархия или фантазия?</h2> <br>
+
+<a href="#anarchy" role="button" class="button-01">АНАРХИЯ</a> &nbsp; &nbsp; &nbsp; <a href="#fantasy" role="button" class="button-02">ФАНТАЗИЯ</a><br><br><br><br><br>
+</div>
+
+<!-- ANSWER -->
+<div class="modal-wrapper" id="anarchy">
+	<div class="modal-body card">
+		<div class="modal-header">
+			<a href="#!" role="button" class="close" aria-label="close this modal">
+				<svg viewBox="0 0 24 24">
+					<path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+				</svg></a></div>
+
+<p style="font-size:35px; color:#B71C1C">Неправильно</p>
+
+<p style="font-size:20px;"> Люди ни эгоистичны, ни альтруистичны от природы — они скорее проявляют те качества, которые поощрает общество.<br><br> Товарно-денежные экономики существует всего несколько тысяч лет, а капитализм всего несколько сот лет. Одной из экономик, развиваемых людьми на протяжении долгого времени на всех континентах, до товарно-денежной экономики, была экономика дарения. В этой системе, если у человека чего-то больше, чем ему необходимо, он отдаёт это. Он не назначает цену и не считает долги. Всё, что ты лично не используешь, можно отдать кому-то в качестве подарка, и, раздавая подарки другим, ты воодушевляешь их на щедрость и усиливаешь дружбу, которая позволяет тебе самому купаться в подарках. Многие экономики, основанные на дарении, просуществовали много тысяч лет и при этом оказались намного более эффективными в удовлетворении потребностей человека. Западные экономисты и политологи вначале предполагали, что многие из этих экономик дарения были, на самом деле, бартерными экономиками, но позже это было опровергнуто: люди специально не вели учёт того, кто кому и что должен, чтобы способствовать развитию общества благородства и коллективизма¹². <br><br>То, что человек не эгоистичен от природы, доказывают и научные исследования — в частности, многолетняя исследовательская работа Кропоткина «Взаимопомощь как фактор эволюции» и остальные³⁴⁵. </p>
+
+<p style="font-size:14px; color:#9E9E9E; max-width: 80%;"><i>
+1. <a href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0_%D0%B4%D0%B0%D1%80%D0%B0" class="link">Википедия</a><br>
+2. <a href="https://ru.anarchistlibraries.net/library/piter-gelderloos-anarhiya-rabotaet#toc10" class="link">«Анархия работает»</a>, Питер Гелдерлоос (2011)<br>
+3. <a href="https://doi.org/10.1038/nature07155" class="link">Fehr, E., Bernhard, H. & Rockenbach, B. Egalitarianism in young children.</a> Nature 454, 1079–1083 (2008). <br> 
+4. https://www.livescience.com/27637-monkeys-shun-selfish-others.html		<br> 
+5. <a href="https://doi.org/10.1037/a0026508" class="link">Stellar JE, Manzo VM, Kraus MW, Keltner D. Class and compassion: socioeconomic factors predict responses to suffering.</a> Emotion. 2012 Jun;12(3):449-59. <br></i></p>
+
+<br><br><a href="6.html" role="button" class="button-01">ПРОДОЛЖИТЬ</a><br><br><br>
+</div><a href="#!" class="outside-trigger"></a></div>
+
+<!-- ANSWER -->
+<div class="modal-wrapper" id="fantasy">
+	<div class="modal-body card">
+		<div class="modal-header">
+			<a href="#!" role="button" class="close" aria-label="close this modal">
+				<svg viewBox="0 0 24 24">
+					<path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+				</svg></a></div>
+
+<p style="font-size:35px; color:#33691E">Правильно</p>
+
+<p style="font-size:20px;"> Люди ни эгоистичны, ни альтруистичны от природы — они скорее проявляют те качества, которые поощрает общество.<br><br> Товарно-денежные экономики существует всего несколько тысяч лет, а капитализм всего несколько сот лет. Одной из экономик, развиваемых людьми на протяжении долгого времени на всех континентах, до товарно-денежной экономики, была экономика дарения. В этой системе, если у человека чего-то больше, чем ему необходимо, он отдаёт это. Он не назначает цену и не считает долги. Всё, что ты лично не используешь, можно отдать кому-то в качестве подарка, и, раздавая подарки другим, ты воодушевляешь их на щедрость и усиливаешь дружбу, которая позволяет тебе самому купаться в подарках. Многие экономики, основанные на дарении, просуществовали много тысяч лет и при этом оказались намного более эффективными в удовлетворении потребностей человека. Западные экономисты и политологи вначале предполагали, что многие из этих экономик дарения были, на самом деле, бартерными экономиками, но позже это было опровергнуто: люди специально не вели учёт того, кто кому и что должен, чтобы способствовать развитию общества благородства и коллективизма¹². <br><br>То, что человек не эгоистичен от природы, доказывают и научные исследования — в частности, многолетняя исследовательская работа Кропоткина «Взаимопомощь как фактор эволюции» и остальные³⁴⁵. </p>
+
+<p style="font-size:14px; color:#9E9E9E; max-width: 80%;"><i>
+1. <a href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D0%BA%D0%B0_%D0%B4%D0%B0%D1%80%D0%B0" class="link">Википедия</a><br>
+2. <a href="https://ru.anarchistlibraries.net/library/piter-gelderloos-anarhiya-rabotaet#toc10" class="link">«Анархия работает»</a>, Питер Гелдерлоос (2011)<br>
+3. <a href="https://doi.org/10.1038/nature07155" class="link">Fehr, E., Bernhard, H. & Rockenbach, B. Egalitarianism in young children.</a> Nature 454, 1079–1083 (2008). <br> 
+4. https://www.livescience.com/27637-monkeys-shun-selfish-others.html		<br> 
+5. <a href="https://doi.org/10.1037/a0026508" class="link">Stellar JE, Manzo VM, Kraus MW, Keltner D. Class and compassion: socioeconomic factors predict responses to suffering.</a> Emotion. 2012 Jun;12(3):449-59. <br></i></p>
+
+<br><br><a href="6.html" role="button" class="button-01">ПРОДОЛЖИТЬ</a><br><br><br>
+</div><a href="#!" class="outside-trigger"></a></div>
+
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Anarchy or Fantsy </title>
+<link rel="icon" type="image/x-icon" href="icon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Anarchy or Fantasy">
+    <meta name="description" content="Try to guess!">
+    <meta name="anarchy-search-index" content="searchIndex.json">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anarchy or Fantasy">
+    <meta property="og:description" content="Try to guess!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anarchy or Fantasy">
+    <meta name="twitter:description" content="Try to guess!">
+
+<style>
+
+
+
+@font-face {
+ font-family: "PT Sans";
+ src:url(fonts/PTSans.ttf);
+}
+
+@font-face {
+ font-family: "Amazing Grotesk DemiBold Italic";
+ src:url(fonts/Amazing_Grotesk_DemiBold_Italic.ttf);
+}
+
+.div {
+  font-family: PT Sans;
+  color: black;
+  width: 70%;
+  word-wrap: break-word;
+}
+
+p {
+  font-family: PT Sans;
+  color: black;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+a:link {
+  color: #051B17;
+  background-color: transparent;
+  text-decoration: understrike;	
+  font-family: Amazing Grotesk DemiBold Italic;
+}
+
+a:visited {
+  color: #051B17;
+  background-color: transparent;
+  text-decoration: understrike;		
+  font-family:Amazing Grotesk DemiBold Italic;
+}
+a:hover {
+  color: #57837A;
+  background-color: transparent;
+  text-decoration: understrike;
+}
+a:active {
+  color: #9E9E9E;
+  background-color: transparent;
+  text-decoration: none;	
+}
+
+
+.link {
+  color: #90CAF9; text-decoration: understrike;
+} 
+
+}
+
+.bottom-container {
+position:relative;
+margin-top:40%;
+}
+
+
+img {
+    max-height: 100%;
+    height: auto;
+}
+
+body {
+  background-image: url('bg.png');
+ background-repeat: no-repeat;
+      background-attachment: fixed;  /*   <--- required   */
+}
+
+.outside-trigger {
+	bottom: 0;
+	cursor: default;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.button-01 {
+  font-family: PT Sans;
+  padding: 1em 3.5em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    transition:         color 1s;
+}
+
+.button-01:hover  {
+  color: #EF5350;
+}	
+
+.button-01:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-01 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-01 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-01:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+.button-02 {
+  font-family: PT Sans;
+  padding: 1em 3.5em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    transition:         color 1s;
+}
+
+.button-02:hover  {
+  color: #42A5F5;
+}	
+
+.button-02:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #48ff00,
+    #ff7300,
+    #ff0000,
+    #00ffd5,
+    #7a00ff,
+    #ff00c8,
+    #ff0000,
+    #fffb00,
+    #002bff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-02 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-02 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-02:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+.parent {
+position: relative
+
+}
+
+.whattodo
+{
+max-width:80%;
+font-size:22px; 
+color:black; 
+font-family: Amazing Grotesk DemiBold Italic;
+border-style: dotted;
+margin: 4px 2px;
+}
+
+.whattodo2
+{
+font-family: PT Sans;
+max-width:80%;
+font-size:25px; 
+color:black; 
+border-style: dotted;
+margin: 4px 2px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<form style="position: absolute;right:0;top:0;padding:7px;"><a href="https://anarchyorfantasy.store/"><img src="img/lang.png" width="40"></a></form>
+<center>
+
+<br>
+<div class="parent">
+
+<p style="font-size:45px; max-width: 80%;">ДОСТАТОЧНО ЗАХОТЕТЬ</p>
+
+<img src="img/pickaxe.jpg" width="700">
+<br><br>
+
+<p style="font-size:30px; max-width: 88%;">
+<b>Если ты желаешь, чтобы мир был другим, меняй его.</b>
+<br><br>
+Вот, с чего можно начать:</p>
+<br><br>
+<blockquote class="whattodo"><i><br>
+1. Изучи идею: прочитай книжек и комиксов (<a href="https://ru.anarchistlibraries.net/">сполна и бесплатно? здесь!</a> — например, <a href="https://ru.anarchistlibraries.net/library/bolo-bolo">Боло-Боло</a>), посмотри видео, фильмы и документалки, подпишись на анархические группы в ВК (с фейка!), Telegram или <a href="https://catnamedivan.online/">сверхприватном Session</a>, пообщайся с людьми.
+<br><br>
+2. Ты не один/одна/одни! Анархистов на самом деле потрясающе немало во всех уголках мира. Поищи движения в своём городе (например, в инстаграме: "anarchists твойгород"). Существует множество самых разных: от книжных кружков и интеллектуальных дебатов до аффинити-групп, устраивающих перфомансы и акции. Не кричи всем, что ты анархист и ищешь анархистов — так можно нарваться только на ментов или идиотов. <br><br>
+3. Нет группы? Создай её! Не происходит перфомансов? Проведи их!<br><br>
+</i></blockquote>
+<br><br>
+
+
+<p style="font-size:30px; max-width: 88%;">Когда втянешься, действуй по правилу "<b>САЖАЕМ</b>" и посади свой росток надежды: </p><br>
+
+<blockquote class="whattodo2"><br>
+<b>Создавай</b> (группы, проекты, инициативы, дистро, <a href="https://vk.com/kuhnyasquat51"style="font-family: PT Sans;">сквоты</a>,<a href="https://t.me/compost_coop/11"style="font-family: PT Sans;"> контрэкономику</a>)<br>
+<b>Агитируй</b> (друзей, в интернете, на улице, в метро, на фестивалях)<br>
+<b>Жертвуй</b> (на развитие, на поддержку, анархическим коллективам, <a href="https://pytkam.net/"style="font-family: PT Sans;">командам против пыток, <a href="https://afund.info/" style="font-family: PT Sans;">Всемирному Анархическому Фонду)<br>
+<b>Активничай</b> (<a href="https://greenbelarus.info/files/downloads/beautiful_trouble.pdf"style="font-family: PT Sans;">проводи перфомансы, акции, саботажи</a>)<br>
+<b>Единись</b> (связывайся с другими коллективами, запрашивай помощь (напр. экономическую) из Революционного Анархического Фонда или Всемирного Анархического Фонда по нужде, планируй совместные акции)<br>
+<b>Мни</b> (учись, читай, развивайся). <br><br>Верующие могут добавить ещё одну букву "М" — <b>молись</b>!;)
+<br><br>
+</blockquote>
+
+<br><br><br><br>
+<p style="font-size:30px; max-width: 88%;">Спасибо за прохождение квеста!<br>
+Я не считал, сколько раз ты ответил/а неправильно, ведь важно не количество ошибкок, но научили ли они чему-то.
+</p>
+
+<br><br>
+<br><br><a href="https://anarchyorfantasy.store/" role="button" class="button-01" style="color:white;background-color: transparent;text-decoration: none;">НАЗАД НА ГЛАВНУЮ</a><br><br><br><br>
+</div>
+</center>
+</body>
+</html>

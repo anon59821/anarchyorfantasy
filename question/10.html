@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Anarchy or Fantsy </title>
+<link rel="icon" type="image/x-icon" href="icon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="Anarchy or Fantasy">
+    <meta name="description" content="Try to guess!">
+    <meta name="anarchy-search-index" content="searchIndex.json">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anarchy or Fantasy">
+    <meta property="og:description" content="Try to guess!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anarchy or Fantasy">
+    <meta name="twitter:description" content="Try to guess!">
+
+<style>
+
+
+
+@font-face {
+ font-family: "PT Sans";
+ src:url(fonts/PTSans.ttf);
+}
+
+@font-face {
+ font-family: "Sowjetschablone";
+ src:url(fonts/Sowjetschablone.ttf);
+}
+
+.div {
+  font-family: PT Sans;
+  color: black;
+  width: 70%;
+  word-wrap: break-word;
+}
+
+p {
+  font-family: PT Sans;
+  color: black;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+a:link {
+  background-color: transparent;
+  text-decoration: none;
+  font-family: PT Sans;
+}
+
+a:visited {
+  background-color: transparent;
+  text-decoration: none;
+  font-family: PT Sans;
+}
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: PT Sans;
+}
+a:active {
+  color: #9E9E9E;
+  background-color: transparent;
+  text-decoration: none;	
+  font-family: PT Sans;
+}
+
+
+.link {
+  color: #90CAF9; text-decoration: understrike;
+} 
+
+}
+
+.bottom-container {
+position:relative;
+margin-top:40%;
+}
+
+
+img {
+    max-height: 100%;
+    height: auto;
+}
+
+body {
+  background-image: url('bg.png');
+ background-repeat: no-repeat;
+      background-attachment: fixed;  /*   <--- required   */
+}
+
+.outside-trigger {
+	bottom: 0;
+	cursor: default;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.button-01 {
+  font-family: PT Sans;
+  padding: 1em 3.5em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    transition:         color 1s;
+}
+
+.button-01:hover  {
+  color: #EF5350;
+}	
+
+.button-01:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-01 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-01 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-01:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+.button-02 {
+  font-family: PT Sans;
+  padding: 1em 3.5em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    transition:         color 1s;
+}
+
+.button-02:hover  {
+  color: #42A5F5;
+}	
+
+.button-02:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #48ff00,
+    #ff7300,
+    #ff0000,
+    #00ffd5,
+    #7a00ff,
+    #ff00c8,
+    #ff0000,
+    #fffb00,
+    #002bff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-02 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-02 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-02:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+.parent {
+position: relative
+
+}
+
+.child {
+position: fixed; bottom: 0; width:100%; text-align: center;
+  background-color: rgba(255,255,255,0.4);
+}
+
+h2 {
+  font-family: PT Sans;
+  color: black;
+  font-size:25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.modal-header {
+	align-items: baseline;
+	display: flex;
+	justify-content: space-between;
+}
+
+.close {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	height: 16px;
+	text-decoration: none;
+	width: 16px;
+
+	svg {
+		width: 16px;
+	}
+}
+
+.modal-wrapper {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.7);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.modal-dialog{
+    overflow-y: initial !important
+}
+
+.modal-body{
+    height: 80%;
+    overflow-y: auto;
+}
+
+
+#anarchy {
+	opacity: 0;
+	transition: $opacity-transition;
+	visibility: hidden;
+
+	&:target {
+		opacity: 1;
+		visibility: visible;
+
+		.modal-body {
+			opacity: 1;
+			transform: translateY(1);
+		}
+	}
+
+	.modal-body {
+		max-width: 900px;
+		opacity: 0;
+		transform: translateY(-50px);
+		transition: $opacity-transition;
+		width: 100%;
+		background: white;
+		padding: 10px;
+		z-index: 1;
+	}
+}
+
+#fantasy {
+	opacity: 0;
+	transition: $opacity-transition;
+	visibility: hidden;
+
+	&:target {
+		opacity: 1;
+		visibility: visible;
+
+		.modal-body {
+			opacity: 1;
+			transform: translateY(1);
+		}
+	}
+
+	.modal-body {
+		max-width: 900px;
+		opacity: 0;
+		transform: translateY(-50px);
+		transition: $opacity-transition;
+		width: 100%;
+		background: white;
+		padding: 10px;
+		z-index: 1;
+	}
+}
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<form style="position: absolute;right:0;top:0;padding:7px;"><a href="https://anarchyorfantasy.store/"><img src="img/lang.png" width="40"></a></form>
+ <div style="font-size:25px;">10/11</div>
+<center>
+
+<br>
+<div class="parent">
+
+<p style="font-size:30px; max-width: 80%;">УСТРАНЕНИЕ ШИРОКОГО ФАКТОРА, СЕРЬЁЗНО УХУДШАЮЩЕГО ЗДОРОВЬЕ БОЛЬШИНСТВА ЛЮДЕЙ</p>
+
+<img src="img/10.jpg" width="700">
+
+
+<div class="child">
+<h2>Это анархия или фантазия?</h2> <br>
+
+<a href="#anarchy" role="button" class="button-01">АНАРХИЯ</a> &nbsp; &nbsp; &nbsp; <a href="#fantasy" role="button" class="button-02">ФАНТАЗИЯ</a><br><br><br><br><br>
+</div>
+
+<!-- ANSWER -->
+<div class="modal-wrapper" id="anarchy">
+	<div class="modal-body card">
+		<div class="modal-header">
+			<a href="#!" role="button" class="close" aria-label="close this modal">
+				<svg viewBox="0 0 24 24">
+					<path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+				</svg></a></div>
+
+<p style="font-size:35px; color:#33691E">Правильно</p>
+
+<p style="font-size:20px;">Согласно исследованию Кэмбриджа¹, существует ряд теоретических и инструментальных причин, по которым необходимо более активное привлечение анархизма и анархического мышления, по меньшей мере из-за того, что это может способствовать улучшению здоровья и устранению широкой несправедливости, которая создает и увековечивает плохое здоровье. <br><br>Это звучит логично, если вспомнить, что при капитализме лекарство тем дороже, чем важнее: например, при себестоимости производства инсулина в 6$ отпускная цена достигает 99$ (на территории США)².
+<br><br>  
+Другим примером могут быть дантисты с сапатистских территорий (которые работают абсолютно прозрачно и часто без зарплат, по себестоимости лекарств). Например, предпринимателю Джастину Ведесу³, который однажды посетил сапатистов,</p>
+
+<blockquote style="font-size:18px; color:#0D1906" cite="https://prometej.info/7-urokov-obshchestvennoi-spravedlivosti-ot-sapatistov/"><i>
+"В этой скромной клинике есть и дантист — неплохая скороговорка — дантист-сапатист — и самое современное зубоврачебное кресло. Дантист не брал сотен или тысяч долларов образовательного кредита, чтобы получить специальность, но пять лет назад его выбрало общество, чтобы он участвовал в обучающей программе швейцарского врача общей практики, который приезжал к сапатистам. Сегодня дантист делает регулярные гигиенические обработки, ставит пломбы и другую зубоврачебную работу за 20 песо за посещение. Около 1.5$. Если вы не сапатист — 30 песо. (Я безуспешно пытался объяснить дантисту, почему поставить пломбу в США стоит 30 000 песо. Так что, если в будущем мне понадобиться дантист, дешевле будет прилететь к нему, самолетом и три часа ехать по джунглям.)"
+</i></blockquote>
+<p style="font-size:20px;">Более того, это может быть неожиданным, но согласно тому же Кэмбриджскому источнику¹, ряд известных медицинских вмешательств или инициатив можно считать анархическими.<br><br>
+ </p>
+<p style="font-size:14px; color:#9E9E9E; max-width: 80%;"><i>
+1. <a href="https://doi.org/10.1177/0486613403257802">Essex R. Anarchy and Its Overlooked Role in Health and Healthcare.</a> Cambridge Quarterly of Healthcare Ethics. 2023;32(3):397-405.<br>
+2. <a href="https://www.statista.com/chart/23127/average-price-per-standard-unit-of-insulin/">Statista, Rand Corpotation</a><br>
+3. <a href="https://prometej.info/7-urokov-obshchestvennoi-spravedlivosti-ot-sapatistov/">7 уроков общественной справедливости от Сапатистов</a> — 3
+<br></i></p>
+
+<br><br><a href="11.html" role="button" class="button-01">ПРОДОЛЖИТЬ</a><br><br><br>
+</div><a href="#!" class="outside-trigger"></a></div>
+
+<!-- ANSWER -->
+<div class="modal-wrapper" id="fantasy">
+	<div class="modal-body card">
+		<div class="modal-header">
+			<a href="#!" role="button" class="close" aria-label="close this modal">
+				<svg viewBox="0 0 24 24">
+					<path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+				</svg></a></div>
+
+<p style="font-size:35px; color:#B71C1C">Неправильно</p>
+
+<p style="font-size:20px;">Согласно исследованию Кэмбриджа¹, существует ряд теоретических и инструментальных причин, по которым необходимо более активное привлечение анархизма и анархического мышления, по меньшей мере из-за того, что это может способствовать улучшению здоровья и устранению широкой несправедливости, которая создает и увековечивает плохое здоровье. <br><br>Это звучит логично, если вспомнить, что при капитализме лекарство тем дороже, чем важнее: например, при себестоимости производства инсулина в 6$ отпускная цена достигает 99$ (на территории США)².
+<br><br>  
+Другим примером могут быть дантисты с сапатистских территорий (которые работают абсолютно прозрачно и часто без зарплат, по себестоимости лекарств). Например, предпринимателю Джастину Ведесу³, который однажды посетил сапатистов,</p>
+
+<blockquote style="font-size:18px;color:#0D1906" cite="https://prometej.info/7-urokov-obshchestvennoi-spravedlivosti-ot-sapatistov/"><i>
+"В этой скромной клинике есть и дантист — неплохая скороговорка — дантист-сапатист — и самое современное зубоврачебное кресло. Дантист не брал сотен или тысяч долларов образовательного кредита, чтобы получить специальность, но пять лет назад его выбрало общество, чтобы он участвовал в обучающей программе швейцарского врача общей практики, который приезжал к сапатистам. Сегодня дантист делает регулярные гигиенические обработки, ставит пломбы и другую зубоврачебную работу за 20 песо за посещение. Около 1.5$. Если вы не сапатист — 30 песо. (Я безуспешно пытался объяснить дантисту, почему поставить пломбу в США стоит 30 000 песо. Так что, если в будущем мне понадобиться дантист, дешевле будет прилететь к нему, самолетом и три часа ехать по джунглям.)"
+</i></blockquote>
+<p style="font-size:20px;">Более того, это может быть неожиданным, но согласно тому же Кэмбриджскому источнику¹, ряд известных медицинских вмешательств или инициатив можно считать анархическими.<br><br>
+ </p>
+<p style="font-size:14px; color:#9E9E9E; max-width: 80%;"><i>
+1. <a href="https://doi.org/10.1177/0486613403257802">Essex R. Anarchy and Its Overlooked Role in Health and Healthcare.</a> Cambridge Quarterly of Healthcare Ethics. 2023;32(3):397-405.<br>
+2. <a href="https://www.statista.com/chart/23127/average-price-per-standard-unit-of-insulin/">Statista, Rand Corpotation</a><br>
+3. <a href="https://prometej.info/7-urokov-obshchestvennoi-spravedlivosti-ot-sapatistov/">7 уроков общественной справедливости от Сапатистов</a> — 3
+<br></i></p>
+
+<br><br><a href="11.html" role="button" class="button-01">ПРОДОЛЖИТЬ</a><br><br><br>
+</div><a href="#!" class="outside-trigger"></a></div>
+
+</div>
+</center>
+</body>
+</html>
